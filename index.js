@@ -20,7 +20,7 @@ const news1 =  mongoose.model("news1", UserSchema)
 
 
         async function XAsena() {
-            mongoose.connect('mongodb://127.0.0.1:27017/test')
+            mongoose.connect('mongodb+srv://nipuna2007:nipuna2007@cluster0.xzonoy7.mongodb.net/?retryWrites=true&w=majority')
   .then(() => console.log('Connected!'));
 
             try {
