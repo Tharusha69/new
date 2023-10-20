@@ -1,4 +1,5 @@
-   "name": "Blue-Lion-QR ",  
+  {
+ "name": "Blue-Lion-QR ",  
     "description": "whatsapp md bot build with nodejs",  
     "repository": "https://github.com/nipuna15/Blue-Lion-QR",  
     "logo": "https://raw.githubusercontent.com/nipuna15/nipuna15/main/IMG-20230613-WA0008.jpg",  
@@ -21,3 +22,4 @@
           }  
       }  
 
+}
