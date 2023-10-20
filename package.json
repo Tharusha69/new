@@ -1,14 +1,15 @@
 {
     "name": "news-bot",
     "version": "1.0.0",
-    "description": "",
+    "description": "Multi device whatsapp bot by moxie",
     "main": "index.js",
+    "type": "commonjs", 
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node index.js"
+          "start": "node index.js --deep-monitoring --attach --name moxie", 
+          "stop": "node stop moxier" 
     },
     "author": "nipuna",
-    "license": "ISC",
+    "license": "GPL-3.0",
     "dependencies": {
         "@whiskeysockets/baileys": "git+https://github.com/nipuna15/baileys",
         "@adiwajshing/keyed-db": "^0.2.4",
