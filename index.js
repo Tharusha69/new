@@ -62,7 +62,7 @@ ${data.time}`
   
      if (!newss) { 
          await new news1({ id: '123', newsid: data.id, events:'true' }).save() 
-           return session.sendMessage("120363039136072023@g.us",{image:{url: data.image}, caption: "YOUR CAPTION HERE"}) 
+           await session.sendMessage("120363175053901301@g.us",{image:{url: data.image}, caption:mg}) 
      } else { 
          if(newss.newsid == data.id )  
           { 
@@ -70,7 +70,7 @@ ${data.time}`
           } 
           else{ 
              await news1.updateOne({ id: '123' }, { newsid : data.id, events:'true'}) 
-             return session.sendMessage("120363039136072023@g.us",{image:{url: data.image}, caption: "YOUR CAPTION HERE"}) 
+             await session.sendMessage("120363175053901301@g.us",{image:{url: data.image}, caption:mg}) 
           } 
   
      }  
