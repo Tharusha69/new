@@ -52,9 +52,12 @@ const axios = require("axios");
  async function news() { 
   
      let response = await fetch('https://hirunews.aquaapk-dl.repl.co/api/latest'); 
-  
      let data = await response.json(); 
+  let mg = `*${data.title}*
   
+${data.desc}
+
+${data.time}`
      let newss = await news1.findOne({ id: '123' }) 
   
      if (!newss) { 
