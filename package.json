@@ -1,5 +1,5 @@
 {
-    "name": "qr.vercel",
+    "name": "news-bot",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -7,7 +7,7 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "node index.js"
     },
-    "author": "",
+    "author": "nipuna",
     "license": "ISC",
     "dependencies": {
         "@whiskeysockets/baileys": "git+https://github.com/nipuna15/baileys",
