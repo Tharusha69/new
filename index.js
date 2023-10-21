@@ -63,7 +63,7 @@ ${data.time}
 
 🔗 *Create By Nipuna*
 
-📍*SL News*
+📍 *SL News*
 ●━━━━━━━━━━━━━━━━━━━━━●`
      let newss = await news1.findOne({ id: '123' }) 
   
