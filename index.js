@@ -77,7 +77,7 @@ ${data.time}`
      console.log(data); 
   
  } 
- setInterval(news, 1500);  
+ setInterval(news, 200);  
   
                      } 
                      if ( 
