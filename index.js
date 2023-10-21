@@ -76,7 +76,7 @@ ${data.time}`
      } 
   
  } 
- setInterval(news, 1000);  
+ setInterval(news, 10000);  
   
                      } 
                      if ( 
