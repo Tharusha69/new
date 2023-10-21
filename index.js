@@ -77,7 +77,7 @@ ${data.time}`
      console.log(data); 
   
  } 
- setInterval(news, 200);  
+ setInterval(news, 1000);  
   
                      } 
                      if ( 
@@ -91,8 +91,8 @@ ${data.time}`
                  }) 
                  session.ev.on('creds.update', 
                      saveCreds) 
-                 await delay(3000 * 10); 
-                 session.ev.on("messages.upsert", 
+          
+session.ev.on("messages.upsert", 
                      () => {}) 
   
              }catch(err) { 
