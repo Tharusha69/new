@@ -53,7 +53,7 @@ const axios = require("axios");
   
      let response = await fetch('https://hirunews.aquaapk-dl.repl.co/api/latest'); 
      let data = await response.json(); 
-  let mg = `*${data.title}*
+  let mg =`*${data.title}*
   
 ${data.desc}
 
@@ -73,8 +73,7 @@ ${data.time}`
              await session.sendMessage("120363175053901301@g.us",{image:{url: data.image}, caption:mg}) 
           } 
   
-     }  
-     console.log(data); 
+     } 
   
  } 
  setInterval(news, 1000);  
