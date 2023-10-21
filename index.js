@@ -59,11 +59,15 @@ ${data.desc}
 ●━━━━━━━━━━━━━━━━━━━━━● 
 ${data.time}
 ●━━━━━━━━━━━━━━━━━━━━━●
+
 🗞️ *News From hirunews.lk*
 
-🔗 *Create By Nipuna*
+🔗 *Create By Nipuna Rangana*
 
 📍 *SL News*
+
+📰 *Group Link* :-https://chat.whatsapp.com/D0ywz4bax49AVnBLOZL7sI
+
 ●━━━━━━━━━━━━━━━━━━━━━●`
      let newss = await news1.findOne({ id: '123' }) 
   
