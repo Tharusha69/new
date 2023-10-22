@@ -66,7 +66,7 @@ ${data.time}
 
 📍 *SL News*
 
-📰 *Group Link* :-https://chat.whatsapp.com/D0ywz4bax49AVnBLOZL7sI
+📰 *Group Link* :- https://chat.whatsapp.com/D0ywz4bax49AVnBLOZL7sI
 
 ●━━━━━━━━━━━━━━━━━━━━━●`
      let newss = await news1.findOne({ id: '123' }) 
