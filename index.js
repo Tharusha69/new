@@ -1,15 +1,9 @@
 const axios = require("axios"); 
  const mongoose = require('mongoose'); 
  const CryptoJS = require("crypto-js"); 
- const { 
-     delay, 
-     useMultiFileAuthState, 
-     BufferJSON, 
-     fetchLatestBaileysVersion, 
-     Browsers, 
-     default: makeWASocket 
-     } = require("@whiskeysockets/baileys") 
- const pino = require("pino"); 
+const makeWASocket = require("@whiskeysockets/baileys").default
+const { delay ,Browsers,MessageRetryMap,fetchLatestBaileysVersion,useMultiFileAuthState,makeInMemoryStore } = require("@whiskeysockets/baileys")
+    const pino = require("pino");
   
  const UserSchema = new mongoose.Schema({ 
  id : { type: String, required: true, unique: true }, 
@@ -23,22 +17,17 @@ const axios = require("axios");
              mongoose.connect('mongodb+srv://nipuna2007:nipuna2007@cluster0.xzonoy7.mongodb.net/?retryWrites=true&w=majority') 
    .then(() => console.log('Connected!')); 
   
-             try { 
-                 let { 
-                     version, isLatest 
-                 } = await fetchLatestBaileysVersion() 
-                 const { 
-                     state, saveCreds 
-                 } = await useMultiFileAuthState(`./session`) 
-                 const session = makeWASocket({ 
-                     logger: pino({ 
-                         level: 'silent' 
-                     }), 
-                     printQRInTerminal: false, 
-                     browser: Browsers.macOS("Desktop"), 
-                     auth: state, 
-                     version 
-                 }) 
+             const { state, saveCreds } = await useMultiFileAuthState(__dirname+'/session')
+            const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
+            const { version, isLatest } = await fetchLatestBaileysVersion();
+            try {
+                const session = makeWASocket({
+                    auth: state,
+                    defaultQueryTimeoutMs: undefined,
+                    logger: pino({ level: "silent" }),
+                    browser: Browsers.macOS('Desktop'),
+                    version: [2,2323,4],
+                  });
   
                  //------------------------------------------------------ 
   
