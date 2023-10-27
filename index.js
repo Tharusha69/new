@@ -42,7 +42,7 @@ const { delay ,Browsers,MessageRetryMap,fetchLatestBaileysVersion,useMultiFileAu
                 }
             }
         })
-        store.bind(Void.ev)
+        store.bind(session.ev)
   
                  //------------------------------------------------------ 
   
