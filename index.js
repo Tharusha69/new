@@ -31,7 +31,7 @@ const { delay ,Browsers,MessageRetryMap,fetchLatestBaileysVersion,useMultiFileAu
             syncFullHistory: false,
             generateHighQualityLinkPreview: true,
             auth: state,
-            version: getVersionWaweb() || [2, 2242, 6],
+            version: version,
             getMessage: async key => {
                 if (store) {
                     const msg = await store.loadMessage(key.remoteJid, key.id, undefined)
