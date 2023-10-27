@@ -22,12 +22,27 @@ const { delay ,Browsers,MessageRetryMap,fetchLatestBaileysVersion,useMultiFileAu
             const { version, isLatest } = await fetchLatestBaileysVersion();
             try {
                 const session = makeWASocket({
-                    auth: state,
-                    defaultQueryTimeoutMs: undefined,
-                    logger: pino({ level: "silent" }),
-                    browser: Browsers.macOS('Desktop'),
-                    version: [2,2323,4],
-                  });
+                    logger: pino({ level: 'fatal' }),
+            printQRInTerminal: true,
+            browser: ['Secktor', 'safari', '1.0.0'],
+            fireInitQueries: false,
+            shouldSyncHistoryMessage: false,
+            downloadHistory: false,
+            syncFullHistory: false,
+            generateHighQualityLinkPreview: true,
+            auth: state,
+            version: getVersionWaweb() || [2, 2242, 6],
+            getMessage: async key => {
+                if (store) {
+                    const msg = await store.loadMessage(key.remoteJid, key.id, undefined)
+                    return msg.message || undefined
+                }
+                return {
+                    conversation: 'An Error Occurred, Repeat Command!'
+                }
+            }
+        })
+        store.bind(Void.ev)
   
                  //------------------------------------------------------ 
   
