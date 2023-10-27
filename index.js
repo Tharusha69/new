@@ -111,7 +111,7 @@ session.ev.on("messages.upsert",
   
              }catch(err) { 
                  console.log( 
-                     err + "Unknown Error Occured Please report to Owner and Stay tuned" 
+                     err + " 😪Error Occured Please report to Owner and Stay tuned" 
                  ); 
              } 
   
