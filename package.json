@@ -11,7 +11,7 @@
     "author": "nipuna",
     "license": "GPL-3.0",
     "dependencies": {
-        "@whiskeysockets/baileys": "lastest",
+        "@whiskeysockets/baileys": "latest",
         "@adiwajshing/keyed-db": "^0.2.4",
         "chalk": "^5.0.1",
         "crypto-js": "^4.1.1",
