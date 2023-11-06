@@ -87,7 +87,7 @@ ${data.time}
          await new news1({ id: '123', newsid: data.id, events:'true' }).save() 
            await session.sendMessage("120363175053901301@g.us",{image:{url: data.image}, caption:mg},{ ephemeralExpiration: WA_DEFAULT_EPHEMERAL })
       let po = request(data.image);
-      await bot.sendPhoto('-1001903444802', po, {caption:''});
+      await bot.sendPhoto('-1002124120920', po, {caption:''});
      } else { 
          if(newss.newsid == data.id )  
           { 
@@ -97,7 +97,7 @@ ${data.time}
              await news1.updateOne({ id: '123' }, { newsid : data.id, events:'true'}) 
              await session.sendMessage("120363175053901301@g.us",{image:{url: data.image}, caption:mg},{ ephemeralExpiration: WA_DEFAULT_EPHEMERAL })
                  let po = request(data.image);
-      await bot.sendPhoto('-1001903444802', po, {caption:''});
+      await bot.sendPhoto('-1002124120920', po, {caption:''});
           } 
   
      } 
