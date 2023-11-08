@@ -4,14 +4,8 @@ const axios = require("axios");
 const makeWASocket = require("@whiskeysockets/baileys").default
 const { delay ,Browsers,MessageRetryMap,fetchLatestBaileysVersion,WA_DEFAULT_EPHEMERAL,useMultiFileAuthState,makeInMemoryStore } = require("@whiskeysockets/baileys")
     const pino = require("pino");
-  const TelegramBot = require('node-telegram-bot-api');
 const request = require('@cypress/request');
 // replace the value below with the Telegram token you receive from @BotFather
-const token = '6715486499:AAF-v7tSLB8ZO_NCNd6vdi36Lx1tIRLrxh4';
-
-
-// Create a bot that uses 'polling' to fetch new updates
-const bot = new TelegramBot(token, {polling: true});
 
  const UserSchema = new mongoose.Schema({ 
  id : { type: String, required: true, unique: true }, 
@@ -86,8 +80,6 @@ ${data.time}
      if (!newss) { 
          await new news1({ id: '123', newsid: data.id, events:'true' }).save() 
            await session.sendMessage("120363175053901301@g.us",{image:{url: data.image}, caption:mg},{ ephemeralExpiration: WA_DEFAULT_EPHEMERAL })
-      let po = request(data.image);
-      await bot.sendPhoto('-1002124120920', po, {caption:''});
      } else { 
          if(newss.newsid == data.id )  
           { 
@@ -96,8 +88,6 @@ ${data.time}
           else{ 
              await news1.updateOne({ id: '123' }, { newsid : data.id, events:'true'}) 
              await session.sendMessage("120363175053901301@g.us",{image:{url: data.image}, caption:mg},{ ephemeralExpiration: WA_DEFAULT_EPHEMERAL })
-                 let po = request(data.image);
-      await bot.sendPhoto('-1002124120920', po, {caption:''});
           } 
   
      } 
