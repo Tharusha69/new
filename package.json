@@ -5,7 +5,7 @@
     "main": "index.js",
     "type": "commonjs", 
     "scripts": {
-          "start": "node index.js --deep-monitoring --attach --name moxie", 
+          "start": "node index.js  --attach --name moxie", 
           "stop": "node stop moxier" 
     },
     "author": "nipuna",
