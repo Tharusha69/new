@@ -1,4 +1,4 @@
 RUN npm install npm@latest
-RUN yarn install --network-concurrency 1
+RUN yarn install
 EXPOSE 8000
 CMD ["npm", "start"]
